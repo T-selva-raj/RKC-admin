@@ -5,3 +5,9 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+
+.card:hover {
+    transform: scale(1.05);
+    transition: .3s;
+    cursor: pointer;
+}

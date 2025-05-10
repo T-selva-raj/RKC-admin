@@ -1,4 +1,37 @@
 <ng-container class="flex flex-column justify-content-between w-full">
     <app-header [title]="pageTitle" [actions]="headerActions"></app-header>
+    <p-floatlabel>
+        <input type="text" pInputText id="search" />
+        <label for="search">Village Name</label>
+    </p-floatlabel>
+    <br>
+    <div class="grid w-full">
+        @for (card of managers; track $index) {
+        <div class="lg:col-3 sm:col-10 md:col-6 card h-25rem">
+            <p-card styleClass="pt-2 shadow-3 border-round h-full">
+                <ng-template pTemplate="header">
+                    <div class="w-full h-full flex justify-content-center align-items-center">
+                        <img [src]="card?.image??'./no-user.jpg'" alt="manager"
+                            style="width: 150px; height: 150px; object-fit: contain;border-radius: 50%;" />
+                    </div>
+                </ng-template>
+                <p-divider type="dashed"></p-divider>
+                <ng-template pTemplate="content">
+                    <div class="text-sm  flex justify-content-around flex-column align-content-center">
+                        <span class="font-bold text-sm">
+                            {{ card.villageName }}
+                        </span>
+                        <p>{{card.managerName}}</p>
+                        <p>{{card.phone}}</p>
+                        <p>{{card.email}}</p>
+                        <p>{{card.teamName}}</p>
+                    </div>
+                </ng-template>
+            </p-card>
 
+        </div>
+        }
+    </div>
+    <p-paginator [rows]="limit" [totalRecords]="managers.length" [first]="offset" [rowsPerPageOptions]="[6, 12, 24]"
+        (onPageChange)="onPageChange($event)"></p-paginator>
 </ng-container>
