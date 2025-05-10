@@ -1,0 +1,10 @@
+<div class="sidebar-container">
+    @for (item of items; track $index) {
+    <div class="sidebar-item">
+        <a [routerLink]="item.routerLink" class="sidebar-link">
+            <i class="{{ item.icon }}"></i>
+            <span>{{ item.label }}</span>
+        </a>
+    </div>
+    }
+</div>

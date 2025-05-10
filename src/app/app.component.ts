@@ -1,13 +1,30 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ToolbarModule } from 'primeng/toolbar';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [CommonModule, RouterModule, ToolbarModule, PanelMenuModule]
 })
-export class AppComponent {
-  title = 'rkc-admin';
+export class AppComponent implements OnInit {
+  items: MenuItem[] | undefined;
+
+  ngOnInit() {
+    this.items = [
+      { label: 'New', icon: 'pi pi-plus' },
+      { label: 'Search', icon: 'pi pi-search' },
+      { label: 'Search', icon: 'pi pi-search' },
+      { label: 'Search', icon: 'pi pi-search' },
+      { label: 'Search', icon: 'pi pi-search' },
+      { label: 'Search', icon: 'pi pi-search' },
+      { label: 'Search', icon: 'pi pi-search' },
+      { label: 'Search', icon: 'pi pi-search' }
+    ];
+  }
 }
