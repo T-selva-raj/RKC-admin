@@ -5,11 +5,12 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { FloatLabel } from 'primeng/floatlabel';
+import { Paginator } from 'primeng/paginator';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [TableModule, ButtonModule, DropdownModule, FormsModule, InputTextModule, FloatLabel],
+  imports: [TableModule, ButtonModule, DropdownModule, FormsModule, InputTextModule, FloatLabel, Paginator],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
@@ -26,7 +27,8 @@ export class ListComponent {
   @Input() searchPlaceholder: string = 'Search...';
   @Input() filterOptions: { label: string; value: any }[] = [];
   @Input() selectedFilter: any;
-
+  @Input() pagenatorOptions: number[] = [5, 10, 15, 20];
+  @Input() page: number = 5;
   @Output() onSearch = new EventEmitter<string>();
   @Output() onFilterChange = new EventEmitter<any>();
 

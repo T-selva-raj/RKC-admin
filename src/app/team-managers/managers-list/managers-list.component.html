@@ -32,6 +32,6 @@
         </div>
         }
     </div>
-    <p-paginator [rows]="limit" [totalRecords]="managers.length" [first]="offset" [rowsPerPageOptions]="[6, 12, 24]"
-        (onPageChange)="onPageChange($event)"></p-paginator>
+    <p-paginator [rows]="limit" [totalRecords]="managers.length" [first]="offset" (onPageChange)="onPageChange($event)"
+        [showJumpToPageDropdown]="false" appendTo="body"></p-paginator>
 </ng-container>

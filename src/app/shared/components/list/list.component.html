@@ -11,8 +11,7 @@
 </div>
 
 
-<p-table [value]="data" [paginator]="true" [rows]="7" [rowsPerPageOptions]="[ 7,14,21]" responsiveLayout="scroll"
-    (onPage)="onPaginate($event)" styleClass="w-full">
+<p-table [value]="data" responsiveLayout="scroll" styleClass="w-full">
     <ng-template pTemplate="header">
         <tr>
             @for (col of columns; track $index) {
@@ -50,3 +49,5 @@
         </tr>
     </ng-template>
 </p-table>
+<p-paginator [rows]="page" [totalRecords]="data.length" (onPageChange)="onPaginate($event)" appendTo="body"
+    [showJumpToPageDropdown]="false"></p-paginator>
