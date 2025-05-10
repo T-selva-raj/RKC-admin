@@ -14,7 +14,7 @@ export class SidebarComponent {
   items: MenuItem[] = [
     { label: 'Dashboard', icon: 'pi pi-home', routerLink: ['/app/dashboard'] },
     { label: 'Teams', icon: 'pi pi-users', routerLink: ['/app/teams'] },
-    { label: 'Team Managers', icon: 'pi pi-user-edit', routerLink: ['/app/dashboard'] },
+    { label: 'Team Managers', icon: 'pi pi-user-edit', routerLink: ['/app/team-managers'] },
     { label: 'Admins', icon: 'pi pi-shield', routerLink: ['/app/dashboard'] },
     { label: 'Gallery', icon: 'pi pi-image', routerLink: ['/app/dashboard'] },
     { label: 'Reports', icon: 'pi pi-file-pdf', routerLink: ['/app/dashboard'] },
