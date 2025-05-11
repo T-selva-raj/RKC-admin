@@ -11,3 +11,12 @@
     transition: .3s;
     cursor: pointer;
 }
+
+.no-events {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.restore-events {
+    cursor: context-menu;
+}

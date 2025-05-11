@@ -1,1 +1,61 @@
-<p style="color: white;">signin works!</p>
+<div
+    class="flex justify-content-center align-items-center  w-screen h-screen lg:flex-row md:flex-column sm:flex-column">
+    <app-loader [isLoader]="isLoader"></app-loader>
+    <div style="width:60%;height: 70%;" class="shadow-3 flex" [ngClass]="isLoader?'no-events':'restore-events'">
+        <div style="width: 50%;" class="flex flex-column p-5 h-full">
+            <h2 class="text-2xl  text-center">Admin Login</h2>
+            <p-divider></p-divider>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="w-full h-full">
+                <div class="flex flex-column justify-content-evenly align-items-center w-full h-full">
+                    <div class="w-full">
+                        <p-inputgroup>
+                            <p-inputgroup-addon>
+                                <i class="pi pi-user"></i>
+                            </p-inputgroup-addon>
+                            <input pInputText placeholder="Email or Mobile" formControlName="username" />
+                        </p-inputgroup>
+                        @if(loginForm.get('username')?.touched && loginForm.get('username')?.invalid){<small
+                            class="text-red-500">
+                            Email/mobile number is required
+                        </small>}
+                    </div>
+
+                    <div class="w-full ">
+                        <p-inputgroup>
+                            <p-inputgroup-addon>
+                                <i class="pi pi-key"></i>
+                            </p-inputgroup-addon>
+                            <input pPassword [feedback]="false" placeholder="Password"
+                                [type]="showPassword ? 'text' : 'password'" formControlName="password" />
+                            <p-inputgroup-addon>
+                                <p-button icon="{{ showPassword ? 'pi pi-eye-slash' : 'pi pi-eye' }}"
+                                    (click)="showPassword = !showPassword" class="w-full h-full "
+                                    severity="secondary" />
+                            </p-inputgroup-addon>
+
+                        </p-inputgroup>
+
+                        @if(loginForm.get('password')?.touched && loginForm.get('password')?.invalid){ <small
+                            class="text-red-500">
+                            Password is required
+                        </small>}
+                    </div>
+
+                    <p-button type="submit" label="Login" class="w-full text-center"></p-button>
+                </div>
+
+            </form>
+        </div>
+        <p-divider layout="vertical"></p-divider>
+        <div style="width: 50%;" class="flex justify-content-around align-items-center flex-column p-5">
+            <div style="width: 50%;height: 50%;" class="flex justify-content-center align-items-center">
+                <img src="./logo.jpg" alt="logo" style="border-radius: 50%;">
+            </div>
+            <div class="font-medium text-center">
+                <h3>இளைஞர் சமுதாய மனமகிழ் மன்றம்</h3>
+                <h5>மேலமருதப்பபுரம்</h5>
+                <h5>தென்காசி-627 860.</h5>
+            </div>
+        </div>
+    </div>
+</div>
