@@ -33,6 +33,14 @@ export const routes: Routes = [
             {
                 path: 'admins',
                 loadComponent: () => import('./admins/admins-list/admins-list.component').then(m => m.AdminsListComponent)
+            },
+            {
+                path: 'gallery',
+                loadComponent: () => import('./gallery/gallery-list/gallery-list.component').then(m => m.GalleryListComponent)
+            },
+            {
+                path: 'gellery/add',
+                loadComponent: () => import('./gallery/gallery-add/gallery-add.component').then(m => m.GalleryAddComponent)
             }
         ]
     },

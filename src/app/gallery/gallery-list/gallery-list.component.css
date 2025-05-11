@@ -1,0 +1,4 @@
+.button:ng-deep {
+    width: 25% !important;
+    height: 20% !important;
+}
