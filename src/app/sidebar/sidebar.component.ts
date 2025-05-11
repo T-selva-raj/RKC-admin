@@ -19,7 +19,7 @@ export class SidebarComponent {
     { label: 'Gallery', icon: 'pi pi-image', routerLink: ['/app/dashboard'] },
     { label: 'Reports', icon: 'pi pi-file-pdf', routerLink: ['/app/dashboard'] },
     { label: 'Fixtures', icon: 'pi pi-calendar', routerLink: ['/app/dashboard'] },
-    { label: 'Scores', icon: 'pi pi-chart-line', routerLink: ['/app/dashboard'] },
+    { label: 'Match Status', icon: 'pi pi-chart-line', routerLink: ['/app/dashboard'] },
     { label: 'Settings', icon: 'pi pi-cog', routerLink: ['/app/dashboard'] }
   ];
 }

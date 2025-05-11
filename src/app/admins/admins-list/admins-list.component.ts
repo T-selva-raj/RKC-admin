@@ -17,9 +17,14 @@ export class AdminsListComponent {
 
   columns = [
     { field: "name", header: "Admin Name" },
-    { field: "createdOn", header: "Created on" },
+    { field: "createdOn", header: "Created on", type: 'date', format: 'dd MMM yyyy' },
     { field: "mobile", header: "Mobile NO" },
-    { field: "status", header: "Status" }
+    {
+      field: "status", header: "Status", type: 'tag', tagOptions: {
+        active: 'bg-green-400',
+        inactive: 'bg-red-400'
+      }
+    }
   ]
   filteroptions = [
     { label: 'None', value: null },
@@ -28,16 +33,13 @@ export class AdminsListComponent {
 
   actions = ['edit', 'delete', 'view'] as ('edit' | 'delete' | 'view')[]
   admins = [
+    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'inactive' },
     { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
     { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
+    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'inactive' },
     { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
     { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
-    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
-    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
-    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
-    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
-    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
-    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'active' },
+    { name: "Selvaraj T", createdOn: "2026-01-01", mobile: '9876543210', status: 'inactive' },
   ];
 
 

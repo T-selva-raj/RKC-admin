@@ -2,5 +2,6 @@
     <app-header [title]="pageTitle" [actions]="headerActions"></app-header>
     <app-list [columns]="columns" [data]="registrations" [actions]="actions" [filterOptions]="filteroptions"
         searchPlaceholder="village name" (onFilterChange)="onFilter($event)" (onSearch)="onSearch($event)"
-        [pagenatorOptions]="[7,14,21]" [page]="7"></app-list>
+        [pagenatorOptions]="[7,14,21]" [page]="7" [isPaginator]="true" [isFilter]="true" [isSearch]="true"
+        [select]="true"></app-list>
 </ng-container>

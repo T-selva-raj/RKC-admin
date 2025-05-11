@@ -1,6 +1,6 @@
 <div class="sidebar-container">
     @for (item of items; track $index) {
-    <div class="sidebar-item">
+    <div class="sidebar-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a [routerLink]="item.routerLink" class="sidebar-link">
             <i class="{{ item.icon }}"></i>
             <span>{{ item.label }}</span>

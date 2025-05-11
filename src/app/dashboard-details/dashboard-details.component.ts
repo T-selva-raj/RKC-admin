@@ -26,7 +26,6 @@ export class DashboardDetailsComponent {
     { field: "Manager", header: "Manager" },
     { field: "status", header: "Status" }
   ]
-  // actions = ['edit', 'delete', 'view'] as ('edit' | 'delete' | 'view')[]
   registrations = [
     { team: 'Warriors', Manager: 'Ajay Kumar', status: 'Approved' },
     { team: 'Panthers', Manager: 'Rohit Singh', status: 'Pending' },

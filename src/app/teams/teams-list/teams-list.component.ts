@@ -16,10 +16,23 @@ export class TeamsListComponent {
     { label: 'Delete', icon: 'pi pi-trash', type: 'outlined', severity: 'danger' as 'success' | 'info' | 'warn' | 'danger' | 'help' | 'primary' | 'secondary' | 'contrast', action: 'delete' }
   ]
   columns = [
-    { field: "team", header: "Team Name" },
     { field: "village", header: "Village Name" },
     { field: "Manager", header: "Manager" },
-    { field: "status", header: "Status" }
+    {
+      field: "status", header: "Status",
+      textColors: {
+        Approved: 'text-green-400',
+        Pending: 'text-purple-400',
+        Rejected: 'text-red-400'
+      }
+    },
+    {
+      field: 'Payment', header: 'Payment',
+      type: 'tag', tagOptions: {
+        Done: 'bg-green-400',
+        Pending: 'bg-yellow-400'
+      }
+    }
   ]
   filteroptions = [
     { label: 'None', value: null },
@@ -29,15 +42,12 @@ export class TeamsListComponent {
   ];
   actions = ['edit', 'delete', 'view'] as ('edit' | 'delete' | 'view')[]
   registrations = [
-    { team: 'Warriors', village: 'Chennai', Manager: 'Ajay Kumar', status: 'Approved' },
-    { team: 'Panthers', village: 'Chennai', Manager: 'Rohit Singh', status: 'Pending' },
-    { team: 'Spartans', village: 'Chennai', Manager: 'Vikram Rana', status: 'Rejected' },
-    { team: 'Warriors', village: 'Chennai', Manager: 'Ajay Kumar', status: 'Approved' },
-    { team: 'Panthers', village: 'Chennai', Manager: 'Rohit Singh', status: 'Pending' },
-    { team: 'Spartans', village: 'Chennai', Manager: 'Vikram Rana', status: 'Rejected' },
-    { team: 'Warriors', village: 'Chennai', Manager: 'Ajay Kumar', status: 'Approved' },
-    { team: 'Panthers', village: 'Chennai', Manager: 'Rohit Singh', status: 'Pending' },
-    { team: 'Spartans', village: 'Chennai', Manager: 'Vikram Rana', status: 'Rejected' }
+    { id: 1, village: 'Chennai', Manager: 'Ajay Kumar', Payment: 'Done', status: 'Approved' },
+    { id: 2, village: 'Chennai', Manager: 'Rohit Singh', Payment: 'Pending', status: 'Pending' },
+    { id: 3, village: 'Chennai', Manager: 'Vikram Rana', Payment: 'Done', status: 'Rejected' },
+    { id: 4, village: 'Chennai', Manager: 'Ajay Kumar', Payment: 'Pending', status: 'Approved' },
+    { id: 5, village: 'Chennai', Manager: 'Rohit Singh', Payment: 'Done', status: 'Pending' },
+    { id: 6, village: 'Chennai', Manager: 'Vikram Rana', Payment: 'Done', status: 'Rejected' }
   ];
 
 

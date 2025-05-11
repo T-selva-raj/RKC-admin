@@ -83,31 +83,10 @@ export class ManagersListComponent {
       email: 'priya@example.com',
       teamName: 'Thunderbolts',
       villageName: 'Madhavpur'
-    }, {
-      image: null,
-      managerName: 'Priya Mehra',
-      phone: '9001234567',
-      email: 'priya@example.com',
-      teamName: 'Thunderbolts',
-      villageName: 'Madhavpur'
-    }, {
-      image: null,
-      managerName: 'Priya Mehra',
-      phone: '9001234567',
-      email: 'priya@example.com',
-      teamName: 'Thunderbolts',
-      villageName: 'Madhavpur'
-    }, {
-      image: null,
-      managerName: 'Priya Mehra',
-      phone: '9001234567',
-      email: 'priya@example.com',
-      teamName: 'Thunderbolts',
-      villageName: 'Madhavpur'
     }
   ];
   paginatedManagers: any[] = [];
-  limit: number = 6;
+  limit: number = 10;
   offset: number = 0;
   onPageChange(event: any): void {
     this.offset = event.offset;

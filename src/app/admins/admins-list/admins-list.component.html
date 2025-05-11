@@ -2,5 +2,5 @@
     <app-header [title]="pageTitle" [actions]="headerActions"></app-header>
     <app-list [columns]="columns" [data]="admins" [actions]="actions" [filterOptions]="filteroptions"
         searchPlaceholder="Admin Name" (onFilterChange)="onFilter($event)" (onSearch)="onSearch($event)"
-        [pagenatorOptions]="[5,10,15]" [page]="5"></app-list>
+        [pagenatorOptions]="[5,10,15]" [page]="5" [isPaginator]="true"></app-list>
 </ng-container>
