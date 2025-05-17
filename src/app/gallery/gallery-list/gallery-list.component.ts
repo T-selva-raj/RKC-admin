@@ -20,18 +20,18 @@ export class GalleryListComponent {
     { label: 'Add Images', icon: 'pi pi-plus', type: 'outlined', severity: 'success' as 'success' | 'info' | 'warn' | 'danger' | 'help' | 'primary' | 'secondary' | 'contrast', action: 'add' },
   ]
   images = [
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
-    { title: 'hello world', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
+    { title: 'Image Title', url: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg' },
   ]
   imageButtons: MenuItem[] = [
     {

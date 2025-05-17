@@ -1,1 +1,30 @@
-<p>status works!</p>
+<ng-container class="flex flex-column justify-content-between w-full">
+    <app-header title="Match Status"></app-header>
+    <div class="w-full h-10rem ">
+        <p-card class="w-full shadow-md" [style]="{backgroundColor:'#E8F9FD'}">
+            <ng-template pTemplate="header">
+                <div class="text-center text-2xl font-semibold text-blue-500 mt-2">
+                    {{matchStatus.round}} </div>
+            </ng-template>
+
+            <div class="flex  justify-content-around">
+                <div class="flex justify-content-around align-items-center flex-column  font-medium h-6rem  mt-2 "
+                    style="width:40%">
+                    <span class="text-xl font-bold">{{matchStatus.teamA}}</span>
+                    <span class="text-2xl">{{matchStatus.scores.teamA}}</span>
+
+                </div>
+                <span class="text-3xl text-gray-500">vs</span>
+                <div class="flex justify-content-around flex-column align-items-center height-6rh-6rem font-medium my-2"
+                    style="width: 40%;">
+                    <span class="text-xl font-bold">{{matchStatus.teamB}}</span>
+                    <span class="text-2xl">{{matchStatus.scores.teamB}}</span>
+                </div>
+
+            </div>
+            <div class="text-center text-blue-500 font-semibold text-lg">
+                {{matchStatus.half}}
+            </div>
+        </p-card>
+    </div>
+</ng-container>

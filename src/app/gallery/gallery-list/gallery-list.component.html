@@ -7,19 +7,18 @@
     <br>
     <div class="w-full grid ">
         @for(image of images;track $index){
-        <div class="lg:col-4 sm:col-10 md:col-6 h-18rem ">
+        <div class="lg:col-4 sm:col-10 md:col-6 h-18rem card">
             <p-card styleClass=" shadow-3 border-round h-full">
-                <p-image [src]="image.url" width="90%" height="80%"></p-image>
+                <p-image [src]="image.url" width="100%" height="80%"></p-image>
                 <ng-template pTemplate="content">
                     <div class="flex justify-content-between align-items-center">
                         <p>{{image.title}}</p>
                     </div>
                 </ng-template>
                 <ng-template pTemplate="footer">
-                    <div class="flex justify-content-end align-items-center">
-                        <p-button label="Delete" severity="danger"
-                            styleClass="p-button-sm text-sm px-2 py-1 mx-2"></p-button>
-                        <!-- <p-button label='Preview' styleClass="p-button-sm text-sm px-2 py-1"></p-button> -->
+                    <div class="flex justify-content-end ">
+                        <i class="pi pi-trash text-red-400 text-lg cursor-pointer"></i>&nbsp;&nbsp;&nbsp;
+                        <i class="pi pi-eye text-blue-400 text-lg cursor-pointer"></i>
                     </div>
                 </ng-template>
 

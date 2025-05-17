@@ -77,6 +77,11 @@
                         (click)="onDelete.emit(row)"></p-button>
                     &nbsp;&nbsp;
                     }
+                    @if(actions.includes('download')){
+                    <p-button icon="pi pi-download" severity="warn" size="small" rounded
+                        (click)="onDownload.emit(row)"></p-button>
+                    &nbsp;&nbsp;
+                    }
                 </div>
             </td>
             }

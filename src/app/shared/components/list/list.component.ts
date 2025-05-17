@@ -19,13 +19,14 @@ import { TagModule } from 'primeng/tag';
 export class ListComponent {
   @Input() columns: { field: string, header: string, type?: string, format?: string, tagOptions?: any, textColors?: any }[] = [];
   @Input() data: any[] = [];
-  @Input() actions: ('edit' | 'delete' | 'view')[] = [];
+  @Input() actions: ('edit' | 'delete' | 'view' | 'download')[] = [];
   @Input() isSearch: boolean = false;
   @Input() isFilter: any = null;
   @Input() isPaginator: boolean = false;
   @Output() onEdit = new EventEmitter<any>();
   @Output() onDelete = new EventEmitter<any>();
   @Output() onView = new EventEmitter<any>();
+  @Output() onDownload = new EventEmitter<any>();
   @Output() onPageChange = new EventEmitter<{ limit: number; offset: number }>();
 
   @Input() searchPlaceholder: string = 'Search...';

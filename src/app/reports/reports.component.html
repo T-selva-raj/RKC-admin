@@ -1,1 +1,6 @@
-<p>reports works!</p>
+<ng-container class="flex flex-column justify-content-between w-full">
+    <app-header [title]="pageTitle"></app-header>
+    <app-list [columns]="columns" [data]="teams" [isSearch]="true" searchPlaceholder="Team name"
+        [filterOptions]="filteroptions" isFilter="true" [isPaginator]="true" [pagenatorOptions]="[10,20,30]" [page]="10"
+        [actions]="actions"></app-list>
+</ng-container>
