@@ -1,0 +1,20 @@
+<ng-container class="flex flex-column justify-content-between w-full">
+    <app-header title="Settings"></app-header>
+    <div class="w-full grid ">
+        @for(setting of settings;track $index){
+        <div class="col-12 sm:col-6 md:col-4  card gap-10">
+            <p-card [styleClass]="setting.bg" [style]="{ height: '8rem'}">
+                <ng-template pTemplate="title">
+                    <span class="font-bold md:text-sm sm:text-sm lg:text-xl">
+                        {{ setting.title }}
+                    </span>
+                </ng-template>
+                <ng-template pTemplate="content">
+                    <p class="text-sm">{{ setting.description }}</p>
+                </ng-template>
+            </p-card>
+        </div>
+        }
+    </div>
+
+</ng-container>

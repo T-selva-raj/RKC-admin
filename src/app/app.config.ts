@@ -9,6 +9,7 @@ import { ToastModule } from 'primeng/toast';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    MessageService,
     provideRouter(routes),
     provideAnimationsAsync(),
     providePrimeNG(

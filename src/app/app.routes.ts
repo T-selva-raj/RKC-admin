@@ -45,6 +45,22 @@ export const routes: Routes = [
             {
                 path: 'gellery/add',
                 loadComponent: () => import('./gallery/gallery-add/gallery-add.component').then(m => m.GalleryAddComponent)
+            },
+            {
+                path: 'match-control/fixtures',
+                loadComponent: () => import('./match-control/fixtures/fixtures.component').then(m => m.FixturesComponent)
+            },
+            {
+                path: 'match-control/status',
+                loadComponent: () => import('./match-control/status/status.component').then(m => m.StatusComponent)
+            },
+            {
+                path: 'reports',
+                loadComponent: () => import('./reports/reports.component').then(m => m.ReportsComponent)
+            },
+            {
+                path: 'settings/all',
+                loadComponent: () => import('./settings/settings/settings.component').then(m => m.SettingsComponent)
             }
         ]
     },

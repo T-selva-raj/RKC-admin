@@ -4,14 +4,14 @@ import { RouterModule } from '@angular/router';
 import { ToolbarModule } from 'primeng/toolbar';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { MenuItem } from 'primeng/api';
-import { ToastComponent } from "./shared/components/toast/toast.component";
+import { ToastModule } from 'primeng/toast';
 
 @Component({
   standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [CommonModule, RouterModule, ToolbarModule, PanelMenuModule, ToastComponent],
+  imports: [CommonModule, RouterModule, ToolbarModule, PanelMenuModule, ToastModule],
   providers: []
 })
 export class AppComponent implements OnInit {

@@ -10,6 +10,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { Router } from '@angular/router';
 import { LoaderComponent } from '../../shared/components/loader/loader.component';
 import { CommonModule } from '@angular/common';
+import { ToastService } from '../../shared/services/toast.service';
 @Component({
   selector: 'app-signin',
   standalone: true,
@@ -21,7 +22,7 @@ export class SigninComponent implements OnInit {
   loginForm!: FormGroup;
   showPassword: boolean = false;
   isLoader: boolean = false;
-  constructor(private fb: FormBuilder, private route: Router) { }
+  constructor(private fb: FormBuilder, private route: Router, private toast: ToastService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -35,8 +36,9 @@ export class SigninComponent implements OnInit {
       this.isLoader = !this.isLoader;
       setTimeout(() => {
         this.isLoader = !this.isLoader;
+        this.toast.success("Success", "Loged in successfully");
         this.route.navigate(['/app/dashboard']);
-      }, 2000)
+      }, 500)
     } else {
       this.loginForm.markAllAsTouched();
     }

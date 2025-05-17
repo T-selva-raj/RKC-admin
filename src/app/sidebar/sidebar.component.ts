@@ -17,9 +17,9 @@ export class SidebarComponent {
     { label: 'Team Managers', icon: 'pi pi-user-edit', routerLink: ['/app/team-managers'] },
     { label: 'Admins', icon: 'pi pi-shield', routerLink: ['/app/admins'] },
     { label: 'Gallery', icon: 'pi pi-image', routerLink: ['/app/gallery'] },
-    { label: 'Reports', icon: 'pi pi-file-pdf', routerLink: ['/app/dashboard'] },
-    { label: 'Fixtures', icon: 'pi pi-calendar', routerLink: ['/app/dashboard'] },
-    { label: 'Match Status', icon: 'pi pi-chart-line', routerLink: ['/app/dashboard'] },
-    { label: 'Settings', icon: 'pi pi-cog', routerLink: ['/app/dashboard'] }
+    { label: 'Reports', icon: 'pi pi-file-pdf', routerLink: ['/app/reports'] },
+    { label: 'Fixtures', icon: 'pi pi-calendar', routerLink: ['/app/match-control/fixtures'] },
+    { label: 'Match Status', icon: 'pi pi-chart-line', routerLink: ['/app/match-control/status'] },
+    { label: 'Settings', icon: 'pi pi-cog', routerLink: ['/app/settings/all'] }
   ];
 }
